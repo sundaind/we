@@ -19,8 +19,8 @@ let guilds = {};
 
 client.on('ready', function () {
   console.log(`Logged in as ${client.user.username}#${client.user.discriminator}`);
-  clientUser = client.user;
-  clientUser.setActivity('PERCOBAAN BOT', { type: 'PLAYING' });
+  client.User = client.user;
+  client.User.setActivity('PERCOBAAN BOT', { type: 'PLAYING' });
 });
 
 client.on('message', function (message) {
